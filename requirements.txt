@@ -1,0 +1,9 @@
+flask
+flask-cors
+opencv-python
+numpy
+uvicorn
+tensorflow-cpu
+google-api-python-client
+google-auth
+gdown
