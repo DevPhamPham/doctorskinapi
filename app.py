@@ -6,6 +6,7 @@ import os
 import cv2
 import gdown
 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 url = "https://drive.google.com/drive/folders/1QFPAAXkra2heEhN4ZwC6Xl54sLMS6Rxx?usp=sharing"
 res = gdown.download_folder(url, quiet=False, use_cookies=False)
 print("Downloading: ", res)
@@ -42,7 +43,10 @@ def predict():
         print(e)
         return jsonify({'error': 'Something went wrong.','is': e})
 
-# if __name__ == '__main__':
-#     # Use the PORT environment variable provided by Heroku
-#     port = int(os.environ.get("PORT", 5000))
-#     app.run(host='0.0.0.0', port=port)
+if __name__ == '__main__':
+    # Use the PORT environment variable provided by Heroku
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
+
+# IP: 112.197.70.187
+# IP2: 115.77.124.118
