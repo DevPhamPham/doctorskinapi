@@ -3,6 +3,7 @@ flask-cors
 opencv-python
 numpy
 uvicorn
+gunicorn
 tensorflow-cpu
 google-api-python-client
 google-auth
